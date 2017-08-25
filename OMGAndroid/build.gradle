@@ -1,0 +1,22 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'          // 3. Specifies the use of the kotlin Android plugin
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+    }
+}
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.loopj.android:android-async-http:1.4.4'
+    compile 'com.squareup.picasso:picasso:2.1.1'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"   // 4. Added the Kotlin Standard Library as a compile time dependency to the project
+}
+repositories {
+    mavenCentral()
+}
